@@ -5,10 +5,7 @@ import styles from './Todo.scss';
 const Todo = ({ onClick, todo }) => (
   <li className={styles.taskLi}>
     <button
-      onClick={onClick}
-      // style={{
-      //   textDecoration: todo.done_at ? 'line-through' : 'none',
-      // }}
+      onClick={!todo.done_at && onClick}
       className={`${styles.task} ${todo.done_at && styles.taskDone}`}
     >
       {todo.message || 'There is no message'}

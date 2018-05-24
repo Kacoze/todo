@@ -43,7 +43,11 @@ const todos = (state = initState, action) => {
       return {
         ...state,
         loading: false,
-        todos: action.res.todos.map(i => ({ ...i, created_at: moment(i.created_at).calendar() })),
+        todos: action.res.todos.map(i => ({
+          ...i,
+          created_at: moment(i.created_at).calendar(),
+          done_at: i.done_at && moment(i.done_at).calendar(),
+        })),
         error: false,
       };
     case `${ADD_TODO}_FAILURE`:
