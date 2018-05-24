@@ -1,0 +1,87 @@
+@import '~shared/styles/index.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*:focus {
+  opacity: 0.5;
+  border: 1px solid $white;
+}
+
+.todoContainer{
+  background: $ebony;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.inputField {
+  height: 50px;
+  width: 80%;
+  margin: 0;
+  background: $ming;
+  color: $white;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.inputField::placeholder {
+  color: $white;
+  opacity: 0.8;
+}
+
+.submitButton {
+  height: 50px;
+  width: 20%;
+  background: $blue;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.error {
+  height: 50px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  background: $red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.taskLi {
+  list-style: none;
+}
+
+.task {
+  height: 80px;
+  width: 100%;
+  background: $green;
+  color: $white;
+  font-size: 16px;
+  padding-left: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.taskDone {
+  background: $ebony;
+  cursor: not-allowed;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.filterButton {
+  height: 50px;
+  width: 20%;
+  background: $blue;
+  font-size: 24px;
+  cursor: pointer;
+}
