@@ -13,7 +13,7 @@ const Todo = ({ onClick, todo }) => (
     >
       {todo.message || 'There is no message'}
       <p>Created: {todo.created_at}</p>
-      {todo.done_at && <p>{todo.done_at}</p>}
+      {todo.done_at && <p>Done: {todo.done_at}</p>}
     </button>
   </li>
 );
